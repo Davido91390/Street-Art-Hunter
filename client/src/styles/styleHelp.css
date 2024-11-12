@@ -59,9 +59,9 @@
   height: 80%;
   overflow: scroll;
   padding-bottom: 1000px;
-  position: relative; /* Crée un contexte de pile pour .helpMain */
-  z-index: 5; /* Définit un z-index inférieur à celui de .helpers */
-  margin-top: 1rem; /* Ajustement pour éviter un chevauchement si nécessaire */
+  position: relative;
+  z-index: 5;
+  margin-top: 1rem;
 }
 
 .show {
