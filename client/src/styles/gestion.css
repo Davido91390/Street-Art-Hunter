@@ -30,6 +30,9 @@
   align-items: flex-start;
   color: var(--grey);
   border-bottom: 1px solid var(--grey);
+  position: relative;
+  z-index: 10;
+  background-color: white;
 }
 .headers > p {
   font-family: var(--main-font);
@@ -41,13 +44,15 @@
   margin-bottom: -1px;
 }
 .gestionBody {
-  height: 100%;
-  padding: 1rem;
+  padding: 2rem;
   height: 80%;
   overflow: scroll;
-  padding-bottom: 600px;
-  margin-top: 0.9rem;
+  padding-bottom: 1000px;
+  position: relative;
+  z-index: 5;
+  margin-top: 1rem;
 }
+
 .gestionBody > section {
   display: flex;
   flex-direction: column;
@@ -186,6 +191,15 @@
     justify-content: center;
   }
   .checkArtworkBtn > a {
-    margin-left: 25%;
+    margin-right: auto;
+  }
+  .informationUser {
+    padding: 1rem;
+  }
+  .informationValidate {
+    padding: 1rem;
+  }
+  .imageValidate {
+    width: 100%;
   }
 }

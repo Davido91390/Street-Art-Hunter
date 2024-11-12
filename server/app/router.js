@@ -29,7 +29,7 @@ router.post(
   "/users",
   verifyMiddleware.verifyFields,
   auth.hashPassword,
-  // upload.uploadPicture,
+  upload.uploadPicture,
   users.add
 );
 router.put("/users/:id", upload.uploadPicture, users.edit);

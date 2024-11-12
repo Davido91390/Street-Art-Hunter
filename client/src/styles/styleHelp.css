@@ -31,6 +31,7 @@
 .helpersContainer > .helpers:not(:first-child) {
   padding-left: -8px;
 }
+
 .helpers {
   all: unset;
   height: 100%;
@@ -40,7 +41,11 @@
   align-items: flex-start;
   color: var(--grey);
   border-bottom: 1px solid var(--grey);
+  position: relative;
+  z-index: 10;
+  background-color: white;
 }
+
 .helpers > p {
   font-family: var(--main-font);
 }
@@ -52,8 +57,11 @@
 .helpMain {
   padding: 1rem;
   height: 80%;
-  overflow: scroll; /* Permet le défilement vertical uniquement */
+  overflow: scroll;
   padding-bottom: 1000px;
+  position: relative; /* Crée un contexte de pile pour .helpMain */
+  z-index: 5; /* Définit un z-index inférieur à celui de .helpers */
+  margin-top: 1rem; /* Ajustement pour éviter un chevauchement si nécessaire */
 }
 
 .show {
@@ -70,7 +78,7 @@
 /* HELPERS */
 
 .helpersTitle {
-  margin: 1.5rem 0;
+  margin: 2.5rem 0;
   font-family: var(--title-font);
   font-weight: bold;
 }
