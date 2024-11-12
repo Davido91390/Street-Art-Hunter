@@ -6,6 +6,7 @@ const verifyFields = (req, res, next) => {
     firstname: Joi.string(),
     pseudo: Joi.string().required(),
     mail: Joi.string().email().required(),
+    password: Joi.string().min(6).required(),
   });
   const result = schema.validate(req.body);
   if (result.error) {
